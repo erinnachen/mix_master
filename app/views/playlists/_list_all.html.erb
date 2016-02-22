@@ -1,0 +1,5 @@
+<ul>
+  <% elements.each do |element| %>
+    <li><%= link_to element.send(display_property), element %></li>
+  <% end %>
+</ul>

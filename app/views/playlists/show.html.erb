@@ -1,7 +1,3 @@
 <h1><%= @playlist.name %></h1>
 <h4><%= link_to "Edit", edit_playlist_path(@playlist.id) %></h4>
-<ul>
-  <% @playlist.songs.each do |song| %>
-    <li><%= link_to song.title, song %></li>
-  <% end %>
-</ul>
+<%= render partial: "list_all", locals: {elements: @playlist.songs, display_property: :title} %>
