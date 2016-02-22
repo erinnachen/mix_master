@@ -1,5 +1,2 @@
-<h1><%= @artist.name%></h1>
-<p><%= link_to "Edit", edit_artist_path %></p>
-<p><%= link_to "Delete", artist_path, method: "delete" %></p>
-<p><%= link_to "New song", new_artist_song_path(@artist.id) %></p>
+<%= render partial: "artist_links", locals: {artist: @artist} %>
 <%= image_tag @artist.image_path %>

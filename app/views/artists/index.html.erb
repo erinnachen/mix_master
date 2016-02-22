@@ -1,8 +1,6 @@
 <h1>All Artists</h1>
 <% @artists.each do |artist| %>
-  <h3><%= link_to "#{artist.name}", artist_path(artist.id) %>
-  <%= link_to "Edit", edit_artist_path(artist.id) %>
-  <%= link_to "Delete", artist_path(artist.id), method: "delete" %> </h3>
+  <%= render partial: "artist_links", locals: {artist: artist}%>
 <% end %>
 
 <h2><%= link_to "New artist", new_artist_path %></h2>

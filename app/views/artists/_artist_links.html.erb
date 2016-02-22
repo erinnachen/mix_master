@@ -1,0 +1,5 @@
+<h1><%= link_to artist.name, artist_path(artist.id)%></h1>
+<p><%= link_to "Edit", edit_artist_path(artist.id) %></p>
+<p><%= link_to "Delete", artist_path(artist.id), method: "delete" %></p>
+<p><%= link_to "New song", new_artist_song_path(artist.id) %></p>
+<br>
