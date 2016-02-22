@@ -11,7 +11,6 @@ RSpec.feature "User edits a playlist" do
     visit playlist_path(playlist.id)
 
     click_on "Edit"
-    save_and_open_page
     fill_in "playlist_name", with: new_list_name
     check("song-#{song_four.id}")
     uncheck("song-#{song_three.id}")
