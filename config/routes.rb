@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   end
   root to: "artists#index"
   resources :songs, only: [:show]
+  resources :playlists, only: [:index, :new, :create, :show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

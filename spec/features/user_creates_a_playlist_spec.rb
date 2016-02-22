@@ -16,7 +16,9 @@ RSpec.feature "User creates a playlist" do
 
     visit playlists_path
     playlist_name = "capybara plays the hits"
-    fill_in "playlist_name", playlist_name
+    click_on "New playlist"
+
+    fill_in "playlist_name", with: playlist_name
     check("song-#{song_one.id}")
     check("song-#{song_three.id}")
     click_on "Create Playlist"
@@ -28,4 +30,5 @@ RSpec.feature "User creates a playlist" do
     within ("li:last") do
       expect(page).to have_link song_three.title, href: song_path(song_three.id)
     end
+  end
 end
